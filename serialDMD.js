@@ -1,8 +1,8 @@
 var serialPort = require("serialport"),
 	PNG = require('png-js'),
 	SerialPort = serialPort.SerialPort,
-	serialPort = new SerialPort("/dev/tty.usbmodem1411", {
-		baudrate: 57600 //31250 //57600
+	serialPort = new SerialPort("/dev/tty.usbmodem1431", {
+		baudrate: 57600
 	}),
 	serialMessage = '';
 
