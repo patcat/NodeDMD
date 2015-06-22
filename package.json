@@ -1,8 +1,9 @@
 {
-  "name": "serialDMD",
+  "name": "nodeDMD",
   "version": "0.0.1",
   "dependencies": {
-    "serialport": "latest"
+    "png-js": "^0.1.1",
+    "serialport": "^1.7.4"
   },
   "engines": {
     "node": "0.10.x",
