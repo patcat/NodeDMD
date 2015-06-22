@@ -14,10 +14,6 @@
 #define DISPLAYS_DOWN 1
 DMD dmd(DISPLAYS_ACROSS, DISPLAYS_DOWN);
 
-/*--------------------------------------------------------------------------------------
-  Interrupt handler for Timer1 (TimerOne) driven DMD refresh scanning, this gets
-  called at the period set in Timer1.initialize();
---------------------------------------------------------------------------------------*/
 void ScanDMD() { 
   dmd.scanDisplayBySPI();
 }
@@ -34,8 +30,7 @@ void setup() {
   Timer1.initialize(4000);
   Timer1.attachInterrupt(ScanDMD);
 
-  //clear/init the DMD pixels held in RAM
-  dmd.clearScreen(true);   //true is normal (all pixels off), false is negative (all pixels on)
+  dmd.clearScreen(true);
 }
 
 void loop() {
